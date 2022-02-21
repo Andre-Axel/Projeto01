@@ -149,7 +149,7 @@ button:hover{    /* transformar o cursor na "maozinh*/
     border-bottom: 2px solid var(--line-input);
 }
 /*Estilo do input " " */
-.input-form{
+.input-form {
     font-family: Poppins-Semibold;
     font-size: 18px;
     color: var(--input-text);
@@ -161,7 +161,7 @@ button:hover{    /* transformar o cursor na "maozinh*/
     padding: 0 5px;
 }
 
-.focus-input-form{
+.focus-input-form {
     position: absolute;
     display: block;
     width: 100%;
@@ -172,7 +172,7 @@ button:hover{    /* transformar o cursor na "maozinh*/
 
 }
 
-.focus-input-form::before{
+.focus-input-form::before {
     content: "";
     display: block;
     position: absolute;
@@ -182,5 +182,26 @@ button:hover{    /* transformar o cursor na "maozinh*/
     height: 2px; /*do mesmo tamanho definido na linha (wrap-input) */
     transition: all 0.4s;
     background-color: var(--main-color);
+}
 
+.focus-input-form::after {
+    font-family: Poppins-Medium;
+    font-size: 18px;
+    color: var(--text1);
+    line-height: 1.2;
+    content: attr(data-placeholder); /* pegar o data-placeholder para apresentar na tela*/
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    padding: 5px;
+    transition: all 0.4s;
+}
+.input-form:focus + .focus-input-form::after{
+    top: -20;
+    font-size: 15px;
+}
+.input-form:focus + .focus-input-form::before{ /* Aplica a transiçao dos 0.4s na barra abaixo da digitação */
+    width: 100%;
 }
