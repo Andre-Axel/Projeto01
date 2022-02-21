@@ -1,0 +1,38 @@
+/*
+    Declaraçao das Variaveis
+*/
+
+:root {
+    --main-color: #407BFF;
+    --link-color: #666666;
+    --text1: #999999;
+    --highlight-text: #333333;
+    --input-text: #555555;
+    --white-color: #ffffff;
+    --points-list: #CCCCCC;
+    --line-input: #d9d9d9;
+}
+/*
+    Fontes
+*/
+
+@font-face{
+    font-family:Poppins-Regular; /*Nome da fonte que esta sendo importada*/
+    src: url("../fonts/Poppins/Poppins-Regular.ttf")   /* SRC : Indica onde está a fonte*/
+}
+
+@font-face{
+    font-family:Poppins-Medium;
+    src: url('..fonts/Poppins/Poppins-Medium.ttf')
+
+}
+
+@font-face{
+    font-family:Poppins-Bold;
+    src: url('..fonts/Poppins/Poppins-Bold.ttf')
+}
+
+@font-face{
+    font-family:Poppins-SemiBold;
+    src: url('..fonts/Poppins/Poppins-SemiBold.ttf')
+}
