@@ -199,7 +199,7 @@ button:hover{    /* transformar o cursor na "maozinh*/
     transition: all 0.4s;
 }
 .input-form:focus + .focus-input-form::after{
-    top: -20;
+    top: -20px;
     font-size: 15px;
 }
 .input-form:focus + .focus-input-form::before{ /* Aplica a transiçao dos 0.4s na barra abaixo da digitação */
