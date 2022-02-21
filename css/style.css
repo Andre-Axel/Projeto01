@@ -36,3 +36,32 @@
     font-family:Poppins-SemiBold;
     src: url('..fonts/Poppins/Poppins-SemiBold.ttf')
 }
+/*
+    Zerar estilos
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    height: 100%;
+    font-family: Poppins-Regular, sans-serif;
+}
+
+ul, li{
+    margin: 0;
+    list-style-type: none;
+}
+
+input, button{
+    outline: none !important;
+    border: none;
+}
+
+button:hover{    /* transformar o cursor na "maozinh*/
+    cursor: pointer;
+}
+/*
+*/
