@@ -55,8 +55,24 @@
 
                     </form>
                 </div> 
+                <img src="../TelaDeLogin/images/login.png" alt="Login" width="300" height="300" class="margin-left-50">
             </div>
         </div>
+        <!-- Javascript - Para manter o Email-Senha encima depois de digitar algo e sair do campo-->
+        <script>
+            let inputs = document.getElementsByClassName("input-form");
+            for (let input of inputs){
+                input.addEventListener("blur", function(){
+                    if (input.value.trim() != ""){
+                        input.classList.add("has-val")
+                    } //-- Se o valor do input for vazio, remove a classe
+                    else{
+                        input.classList.remote("has-val")
+                    }
+                });
+            }
+
+        </script>
 
     </body>
 
