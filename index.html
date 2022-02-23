@@ -16,7 +16,7 @@
         <div class="container>">
             <div class="container-login"> <!-- estilo da pagina-->
                 <div class="wrap-login"> <!-- estilo do formulario -->
-                    <form class="login-form" id="login-form">
+                    <form class="login-form" id="login-form" method="post">
                         <spam class = "login-form-title">
                             Faça o login
                         </spam>
@@ -33,7 +33,9 @@
                         </div>
 
                         <div class="container-login-form-btn">
-                            <button class="login-form-btn" type="submit">Login</button> <!-- Criaçao do botao de login -->
+                            <button class="login-form-btn" type="submit">
+                                Login
+                            </button> <!-- Criaçao do botao de login -->
                         </div>
 
                         <ul class="login-utils">
@@ -73,10 +75,9 @@
                     }
                 });
             }
-
             //Acessa a classe e dinamicamente faz o efeito da barra vermelha (inclui na div)
-            let form = document.getElementsById("login-form");
-            form.addEventListener("submit", function(event){
+            let form = document.getElementById("login-form");
+                form.addEventListener("submit", function(event){
                 let inputs = document.getElementsByClassName('input-form');
                 //Se algum campo for vazio - copia a classe wrap-input-invalid
                 for (let input of inputs){
@@ -84,7 +85,7 @@
                         input.parentElement.classList.add("wrap-input-invalid");
                     }
                 }
-                event.preventDefault(); //Faz com que o evento seja finalizado e nao redireciona a pagina
+               event.preventDefault(); //Faz com que o evento seja finalizado e nao redireciona a pagina
             });
         </script>
 

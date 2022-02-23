@@ -290,5 +290,5 @@ a:hover{
 /* Adiciona a barra vermelha */
 .wrap-input-invalid {
     width: 100%;
-    border-bottom: solid 2px var(--invalid-field);
+    border-bottom: 2px solid var(--invalid-field);
 }
