@@ -9,6 +9,7 @@
     --white-color: #ffffff;
     --points-list: #CCCCCC;
     --line-input: #d9d9d9;
+    --invalid-field: #e74c3c;
 }
 /* Fontes */
 
@@ -284,4 +285,10 @@ a:hover{
     top: 50%;
     transform: translateY(100%);
     left: 40px;
+}
+
+/* Adiciona a barra vermelha */
+.wrap-input-invalid {
+    width: 100%;
+    border-bottom: solid 2px var(--invalid-field);
 }

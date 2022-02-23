@@ -2,8 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <meta name="viewport" content="width-device-width, initial-scale=0.1">
+        <meta name="viewport" content="width-device-width, initial-scale=1">
         <title>Tela de Login</title>
 
             <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
@@ -17,7 +16,7 @@
         <div class="container>">
             <div class="container-login"> <!-- estilo da pagina-->
                 <div class="wrap-login"> <!-- estilo do formulario -->
-                    <form class="login-form">
+                    <form class="login-form" id="login-form">
                         <spam class = "login-form-title">
                             Faça o login
                         </spam>
@@ -34,7 +33,7 @@
                         </div>
 
                         <div class="container-login-form-btn">
-                            <button class="login-form-btn">Login</button> <!-- Criaçao do botao de login -->
+                            <button class="login-form-btn" type="submit">Login</button> <!-- Criaçao do botao de login -->
                         </div>
 
                         <ul class="login-utils">
@@ -75,6 +74,18 @@
                 });
             }
 
+            //Acessa a classe e dinamicamente faz o efeito da barra vermelha (inclui na div)
+            let form = document.getElementsById("login-form");
+            form.addEventListener("submit", function(event){
+                let inputs = document.getElementsByClassName('input-form');
+                //Se algum campo for vazio - copia a classe wrap-input-invalid
+                for (let input of inputs){
+                    if (input.value.trim()== ""){
+                        input.parentElement.classList.add("wrap-input-invalid");
+                    }
+                }
+                event.preventDefault(); //Faz com que o evento seja finalizado e nao redireciona a pagina
+            });
         </script>
 
     </body>
